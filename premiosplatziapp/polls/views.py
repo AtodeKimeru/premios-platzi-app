@@ -30,7 +30,7 @@ from .models import Question, Choice
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
-    context_object_name = 'lastest_question_list'
+    context_object_name = 'latest_question_list'
 
     def get_queryset(self):
         """Return the last five published question"""
@@ -44,7 +44,7 @@ class DetailView(generic.DetailView):
 
 class ResultView(generic.DetailView):
     model = Question
-    template_name = "polls/result.html"
+    template_name = "polls/results.html"
 
 
 def vote(request, question_id):
